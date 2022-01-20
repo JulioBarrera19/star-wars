@@ -1,0 +1,267 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url('./assets/fondo.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#root{
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.containerHeader{
+  background-color: black;
+  position: fixed !important;
+  top: 0 !important;
+  width: 100% !important;
+  z-index: 1 !important;
+}
+
+.logoHeader{
+  height: 100px;
+}
+
+.containerPeliculas{
+  padding: 0 5%;
+  margin: 120px 0px 0px 0px !important;
+  width: 100%;
+  .colPeli{
+    padding: 3rem;
+  }
+  @media (max-width: 1000px){
+    padding: 0;
+    .colPeli{
+      padding: 3rem 1.5rem;
+    }
+  }
+}
+
+.colorTitle{
+  color: #8ed7ee;
+  font-weight: bold;
+  font-size: 23px;
+  margin-bottom: 0px !important;
+}
+
+.resumenEpisodio{
+  margin-left: 60px !important;
+  text-align: justify;
+  transform-origin: 50% 80%;
+  transform: perspective(250px) rotateX(15deg);
+  font-size: 27px;
+  color: #fde719;
+  position: relative;
+  top: -150px;
+  overflow-x: hidden !important;
+  @media (max-width: 767px){
+    top: -130px;
+    margin-right: 60px !important;
+  }
+  @media (max-width: 500px){
+    top: -230px;
+  }
+  @media (max-width: 410px){
+    top: -230px;
+    transform: none;
+    margin-top: 280px;
+    font-size: 20px;
+    .titleEpisodio{
+      font-size: 26px;
+    }
+  }
+}
+
+.titleEpisodio{
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.containerPersonaje{
+  max-height: calc(100vh - 150px) ;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.btnFavoritos{
+  background-color: #fde719 !important;
+  color: black !important;
+  font-size: 11px !important;
+  font-weight: bold !important;
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+}
+
+.btnRemoveFavorito{
+  background-color:#CB4335 !important;
+  color: white !important;
+  font-size: 11px !important;
+  font-weight: bold !important;
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+}
+
+.divider{
+  border: 0.5px solid #afafaf;
+  margin-top: 0px !important;
+  margin-bottom: 7px !important;
+}
+
+.divideTitle{
+  border: 0.5px solid #303030 !important;
+  margin: 4px 0px 12px 0px !important;
+}
+
+.cardPelicula{
+  background-color: transparent !important;
+  border: 1px solid #afafaf !important;
+}
+
+.cardPelicula:hover{
+  box-shadow: 1px 1px 10px 3px #03d9f1;
+}
+
+.imgPelicula{
+  height: 380px
+}
+
+.detailsPelicula{
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 20px !important;
+}
+
+.textPelicula{
+  margin-bottom: 12px !important;
+}
+
+.cardPersonaje{
+  background-color: transparent !important;
+  border: 1px solid #324e8b !important;
+  box-shadow: 0 0 10px 0 #324e8b, inset 50px 50px 110px -30px #293D52 !important;
+  width: 320px;
+  border-top-color: #186778 !important;
+  border-bottom-color: #551b7e !important;
+  margin: auto;
+  @media (max-width: 390px){
+    width: 85%;
+  }
+}
+
+.namePersonaje{
+  color: #fde719;
+  font-weight: bold;
+  font-size: 35px;
+  padding-left: 25px;
+}
+
+.btnVerPersonaje{
+  font-size: 18px;
+  color: #afafaf;
+}
+
+.btnVerPersonaje:hover{
+  color: #fde719;
+}
+
+.titlePersonaje{
+  border-top: 1px solid #303030;
+  padding-bottom: 0px !important;
+}
+
+.textDetalle{
+  color: #8ed7ee;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.textParticipaciones{
+  color: #69906b;
+  margin: 0px;
+  font-size: 14px;
+}
+
+.textTipo{
+  color:  #afafaf;
+  font-size: 15px;
+}
+
+.containerFavs{
+  margin-top: 120px;
+  @media (max-width: 575px){
+    margin-top: 150px;
+  }
+}
+
+.containerDetalle{
+  padding-top: 140px;
+  overflow-y: hidden !important;
+}
+
+.mensajeSinFav{
+  background-color: transparent !important;
+  border: 1px solid #324e8b !important;
+  border-top-color: #186778 !important;
+  border-bottom-color: #551b7e !important;
+  height: 100px;
+  font-size: 20px;
+  width: 380px;
+  margin: auto;
+}
+
+.alertaAdd{
+  position: fixed;
+  top: 120px;
+  right: 10px;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  width: 300px;
+  color: white;
+  background-color: #00bc8c;
+  z-index: 10;
+}
+
+.alertaRemove{
+  position: fixed;
+  top: 120px;
+  right: 10px;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  width: 300px;
+  color: white;
+  background-color: #CB4335;
+  z-index: 10;
+}
+
+.titleFavoritos{
+  margin: 10px 0 10px 0;
+  text-align: center;
+  
+}
+
+.textHeader{
+  color: #fde719;
+  font-size: 18px;
+}
+
+.textHeader:hover{
+  color: #fde719;
+}
